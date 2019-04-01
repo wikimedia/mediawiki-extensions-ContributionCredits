@@ -1,0 +1,33 @@
+{
+	"name": "Contribution Credits",
+	"version": "3.0",
+	"author": [
+		"Jaime Prilusky",
+		"Al Maghi",
+		"Manuel Wendel",
+		"[https://www.mediawiki.org/wiki/User:Sophivorus Sophivorus]"
+	],
+	"url": "https://www.mediawiki.org/wiki/Extension:Contribution_Credits",
+	"descriptionmsg": "contributioncredits-desc",
+	"license-name": "GPL-3.0-or-later",
+	"type": "skin",
+	"requires": {
+		"MediaWiki": ">= 1.29.0"
+	},
+	"MessagesDirs": {
+		"ContributionCredits": [
+			"i18n"
+		]
+	},
+	"AutoloadClasses": {
+		"ContributionCredits": "ContributionCredits.php"
+	},
+	"Hooks": {
+		"SkinAfterContent": "ContributionCredits::onSkinAfterContent"
+	},
+	"config": {
+		"ContributionCreditsUseRealNames": false,
+		"ContributionCreditsHeader": false
+	},
+	"manifest_version": 1
+}

@@ -1,0 +1,9 @@
+{
+	"@metadata": {
+		"authors": [
+			"Sophivorus"
+		]
+	},
+	"contributioncredits-desc": "{{desc|name=WikipediaExtracts|url=https://www.mediawiki.org/wiki/Extension:WikipediaExtracts}}",
+	"contributioncredits-header": "Header of the contributors section"
+}
