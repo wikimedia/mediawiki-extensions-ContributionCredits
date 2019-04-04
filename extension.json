@@ -1,6 +1,6 @@
 {
 	"name": "Contribution Credits",
-	"version": "3.0",
+	"version": "3.1",
 	"author": [
 		"Jaime Prilusky",
 		"Al Maghi",
@@ -26,8 +26,9 @@
 		"SkinAfterContent": "ContributionCredits::onSkinAfterContent"
 	},
 	"config": {
+		"ContributionCreditsHeader": false,
 		"ContributionCreditsUseRealNames": false,
-		"ContributionCreditsHeader": false
+		"ContributionCreditsExcludedCategories": []
 	},
 	"manifest_version": 1
 }

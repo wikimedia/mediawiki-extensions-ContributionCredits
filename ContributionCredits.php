@@ -3,13 +3,25 @@
 class ContributionCredits {
 
 	public static function onSkinAfterContent( &$data, Skin $skin ) {
-		global $wgContributionCreditsHeader, $wgContributionCreditsUseRealNames;
+		global $wgContentNamespaces,
+			$wgContributionCreditsHeader,
+			$wgContributionCreditsUseRealNames,
+			$wgContributionCreditsExcludedCategories;
 
 		$title = $skin->getTitle();
 		$namespace = $title->getNamespace();
 		$request = $skin->getRequest();
 		$action = $request->getVal( 'action', 'view' );
-		if ( $namespace === NS_MAIN and $action === 'view' ) {
+		if ( in_array( $namespace, $wgContentNamespaces ) and $action === 'view' ) {
+
+			// If the page is in the list of excluded categories, don't show the credits
+			$categories = $title->getParentCategories();
+			foreach ( $categories as $category  => $title ) {
+				$category = str_ireplace( '_', ' ', $category );
+				if ( in_array( $category, $wgContributionCreditsExcludedCategories ) ) {
+					return;
+				}
+			}
 
 			$database = wfGetDB( DB_REPLICA );
 			$articleID = $title->getArticleID();
