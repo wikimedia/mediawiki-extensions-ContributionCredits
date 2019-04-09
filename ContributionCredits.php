@@ -16,8 +16,8 @@ class ContributionCredits {
 
 			// If the page is in the list of excluded categories, don't show the credits
 			$categories = $title->getParentCategories();
-			foreach ( $categories as $category  => $title ) {
-				$category = str_ireplace( '_', ' ', $category );
+			foreach ( $categories as $key => $value ) {
+				$category = str_ireplace( '_', ' ', $key );
 				if ( in_array( $category, $wgContributionCreditsExcludedCategories ) ) {
 					return;
 				}
