@@ -1,0 +1,9 @@
+{
+	"@metadata": {
+		"authors": [
+			"Kly"
+		]
+	},
+	"contributioncredits-desc": "在頁面底端顯示貢獻者名單",
+	"contributioncredits-header": "貢獻者"
+}
