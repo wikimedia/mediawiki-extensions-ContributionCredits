@@ -10,7 +10,6 @@
 	"url": "https://www.mediawiki.org/wiki/Extension:Contribution_Credits",
 	"descriptionmsg": "contributioncredits-desc",
 	"license-name": "GPL-3.0-or-later",
-	"type": "skin",
 	"requires": {
 		"MediaWiki": ">= 1.29.0"
 	},
