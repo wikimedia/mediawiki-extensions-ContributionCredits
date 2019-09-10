@@ -1,7 +1,8 @@
 {
 	"@metadata": {
 		"authors": [
-			"Railfail536"
+			"Railfail536",
+			"Rail"
 		]
 	},
 	"contributioncredits-desc": "Wyświetla listę autorów strony w stopce",
