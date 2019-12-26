@@ -2,6 +2,10 @@
 
 class ContributionCredits {
 
+	/**
+	 * @param string &$data
+	 * @param Skin $skin
+	 */
 	public static function onSkinAfterContent( &$data, Skin $skin ) {
 		global $wgContentNamespaces,
 			$wgContributionCreditsHeader,
@@ -12,7 +16,7 @@ class ContributionCredits {
 		$namespace = $title->getNamespace();
 		$request = $skin->getRequest();
 		$action = $request->getVal( 'action', 'view' );
-		if ( in_array( $namespace, $wgContentNamespaces ) and $action === 'view' ) {
+		if ( in_array( $namespace, $wgContentNamespaces ) && $action === 'view' ) {
 
 			// If the page is in the list of excluded categories, don't show the credits
 			$categories = $title->getParentCategories();
@@ -36,7 +40,7 @@ class ContributionCredits {
 			);
 
 			foreach ( $result as $row ) {
-				if ( $wgContributionCreditsUseRealNames and $row->user_real_name ) {
+				if ( $wgContributionCreditsUseRealNames && $row->user_real_name ) {
 					$link = Linker::userLink( $row->user_id, $row->user_name, $row->user_real_name );
 				} else {
 					$link = Linker::userLink( $row->user_id, $row->user_name );
