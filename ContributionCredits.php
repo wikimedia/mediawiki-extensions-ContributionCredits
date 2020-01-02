@@ -29,7 +29,7 @@ class ContributionCredits {
 
 			$database = wfGetDB( DB_REPLICA );
 			$articleID = $title->getArticleID();
-			$authors = [];
+			$links = [];
 
 			$result = $database->select(
 				[ 'revision', 'user' ],
