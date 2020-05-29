@@ -31,12 +31,15 @@ class ContributionCredits {
 			$articleID = $title->getArticleID();
 			$links = [];
 
+			$actorQuery = ActorMigration::newMigration()->getJoin( 'rev_user' );
+			$fieldRevUser = $actorQuery['fields']['rev_user'];
 			$result = $database->select(
-				[ 'revision', 'user' ],
-				[ 'distinct user.user_id', 'user.user_name', 'user.user_real_name' ],
-				[ 'user.user_id = revision.rev_user', "rev_page = $articleID", 'rev_user > 0', 'rev_deleted = 0' ],
+				[ 'revision' => 'revision' ] + $actorQuery['tables'] + [ 'user' => 'user' ],
+				[ 'user_id', 'user_name', 'user_real_name' ],
+				[ 'rev_page' => $articleID, $fieldRevUser . ' > 0', 'rev_deleted = 0' ],
 				__METHOD__,
-				[ 'ORDER BY' => 'user.user_name ASC' ]
+				[ 'DISTINCT', 'ORDER BY' => 'user_name ASC' ],
+				$actorQuery['joins'] + [ 'user' => [ 'JOIN', 'user_id = ' . $fieldRevUser ] ]
 			);
 
 			foreach ( $result as $row ) {
