@@ -1,0 +1,9 @@
+{
+	"@metadata": {
+		"authors": [
+			"MirukuPC"
+		]
+	},
+	"contributioncredits-desc": "フッターに貢献度クレジットを表示する",
+	"contributioncredits-header": "貢献者"
+}
