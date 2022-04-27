@@ -1,8 +1,10 @@
 {
 	"@metadata": {
 		"authors": [
-			"Erelon"
+			"Erelon",
+			"Ex-Diktator"
 		]
 	},
+	"contributioncredits-desc": "הצגת מידע על תרומה בכותרת תחתונה",
 	"contributioncredits-header": "תורמים"
 }
