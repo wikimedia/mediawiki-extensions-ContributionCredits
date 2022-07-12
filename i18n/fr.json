@@ -1,9 +1,10 @@
 {
 	"@metadata": {
 		"authors": [
-			"Pols12"
+			"Pols12",
+			"Verdy p"
 		]
 	},
-	"contributioncredits-desc": "Affiche les mentions de provenance dans le pied-de-page",
+	"contributioncredits-desc": "Affiche les crédits de contribution dans le pied de page.",
 	"contributioncredits-header": "Contributeurs"
 }
