@@ -1,8 +1,10 @@
 {
 	"@metadata": {
 		"authors": [
-			"Mainframe98"
+			"Mainframe98",
+			"McDutchie"
 		]
 	},
+	"contributioncredits-desc": "Toont naamsvermelding voor bijdragen in de voettekst",
 	"contributioncredits-header": "Bijdragers"
 }
