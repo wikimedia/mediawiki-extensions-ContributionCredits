@@ -1,5 +1,7 @@
 <?php
 
+use MediaWiki\MediaWikiServices;
+
 class ContributionCredits {
 
 	/**
@@ -27,7 +29,7 @@ class ContributionCredits {
 				}
 			}
 
-			$database = wfGetDB( DB_REPLICA );
+			$database = MediaWikiServices::getInstance()->getDBLoadBalancer()->getConnection( DB_REPLICA );
 			$articleID = $title->getArticleID();
 			$links = [];
 
