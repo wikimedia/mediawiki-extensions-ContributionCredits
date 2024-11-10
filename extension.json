@@ -22,12 +22,13 @@
 		"ContributionCredits": "ContributionCredits.php"
 	},
 	"Hooks": {
-		"SkinAfterContent": "ContributionCredits::onSkinAfterContent"
+		"BeforePageDisplay": "ContributionCredits::onBeforePageDisplay"
 	},
 	"config": {
 		"ContributionCreditsHeader": false,
 		"ContributionCreditsUseRealNames": false,
-		"ContributionCreditsExcludedCategories": []
+		"ContributionCreditsExcludedCategories": [],
+		"ContributionCreditsUsersExclude": []
 	},
 	"manifest_version": 1
 }
