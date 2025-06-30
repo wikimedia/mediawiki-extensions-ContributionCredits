@@ -1,8 +1,10 @@
 {
 	"@metadata": {
 		"authors": [
-			"Soul Train"
+			"Soul Train",
+			"MidnightLG"
 		]
 	},
+	"contributioncredits-desc": "Показывает авторов контента в футере",
 	"contributioncredits-header": "Авторы"
 }
