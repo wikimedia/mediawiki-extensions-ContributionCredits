@@ -1,6 +1,8 @@
 <?php
 
+use MediaWiki\Linker\Linker;
 use MediaWiki\MediaWikiServices;
+use MediaWiki\User\ActorMigration;
 
 class ContributionCredits {
 	/**
