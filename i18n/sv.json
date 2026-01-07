@@ -1,8 +1,10 @@
 {
 	"@metadata": {
 		"authors": [
-			"WikiPhoenix"
+			"WikiPhoenix",
+			"Stefan2255"
 		]
 	},
+	"contributioncredits-desc": "Visar bidragserkännanden i sidfoten",
 	"contributioncredits-header": "Bidragsgivare"
 }
